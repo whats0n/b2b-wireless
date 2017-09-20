@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html ng-app="app" ng-csp ng-controller="LayoutCtrl">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>B2BSoft SSO</title>
+        <link rel="stylesheet" href="styles.min.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body lang="en">
+
+        <!-- begin main-header -->
+        <header class="main-header">
+            <div class="main-header__box">
+                <img src="b2b.svg" alt="B2BSoft">
+                <img src="b2b-wireless.png" alt="ELEVATE">
+            </div>
+        </header>
+        <!-- end main-header -->
+
+        <div class='container page-Templates/eHopperPosWireless/login' ng-cloak>
+            <div class="row" ng-show="model.errorMessage">
+            <div class="col-md-12 col-sm-12">
+                <div class="alert alert-danger">
+                    <strong>Error:</strong>
+                    {{model.errorMessage}}
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <form name="form" method="post" action="{{model.loginUrl}}">
+                <anti-forgery-token token="model.antiForgery"></anti-forgery-token>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input required name="username" autofocus id="username" type="text" class="form-control" placeholder="Username" ng-model="model.username" maxlength="100">
+                        <button class="form-group__clear" type="button">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input required id="password" name="password" type="password" class="form-control" placeholder="Password" ng-model="model.password" maxlength="100" autocomplete="off" focus-if="model.username">
+                        <button class="form-group__clear" type="button">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Login&nbsp;&rarr;</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        </div>
+
+        <script id='modelJson' type='application/json'>{&quot;loginUrl&quot;:&quot;/core/login?signin=bf921c54d8635b36aec9a3abe5ec0130&quot;,&quot;antiForgery&quot;:{&quot;name&quot;:&quot;idsrv.xsrf&quot;,&quot;value&quot;:&quot;3Os66Gm9nxUv1KcFeUaXgO_2IfE6l0Eswo_d4AlsTgI0sLLQHz_h1oxPwMBMHp-0yvLF0oYpL80dg_QD7ih8mvaJJe3HVb1jrLZ5frUd2rM&quot;},&quot;allowRememberMe&quot;:true,&quot;rememberMe&quot;:false,&quot;username&quot;:null,&quot;externalProviders&quot;:[],&quot;additionalLinks&quot;:null,&quot;clientName&quot;:&quot;eHopper POS for Wireless Merchant&quot;,&quot;clientUrl&quot;:null,&quot;clientLogoUrl&quot;:null,&quot;errorMessage&quot;:null,&quot;requestId&quot;:&quot;800006fc-0002-7c00-b63f-84710c7967bb&quot;,&quot;siteUrl&quot;:&quot;https://localhost:44333/core/&quot;,&quot;siteName&quot;:&quot;B2BSoft SSO&quot;,&quot;currentUser&quot;:null,&quot;logoutUrl&quot;:&quot;https://localhost:44333/core/logout&quot;,&quot;custom&quot;:null}</script>
+        <script src="scripts.2.5.0.js"></script>
+        
+    </body>
+</html>

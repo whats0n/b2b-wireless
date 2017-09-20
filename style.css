@@ -1,0 +1,162 @@
+﻿body {
+	margin: 0 !important;
+	background: #eaeae9;
+}
+
+.main-header {
+	position: relative;
+	height: 90px;
+	background: #2e99db;
+}
+
+.main-header__box {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	padding: 5px 20px;
+	width: 450px;
+	height: 60px;
+	background: rgba(255, 255, 255, 0.7);
+	font-size: 0.1px;
+	line-height: 40px;
+	text-align: justify;
+	transform: translate3d(-50%,0,0);
+}
+
+.main-header__box:after {
+	content: '';
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+
+.main-header__box img {
+	max-width: 50%;
+	max-height: 100%;
+}
+
+/*FORM*/
+
+.panel-body {
+	padding: 20px 20px 20px;
+	margin: 0 auto;
+	max-width: 450px;
+	background: #fff;
+}
+
+.form-group {
+	position: relative;
+	margin: 20px 0 0;
+}
+
+.form-group label {
+	display: none;
+}
+
+.form-control {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 15px;
+	border: 1px solid #eee;
+	border-radius: 0;
+	width: 100%;
+	height: 60px;
+
+	color: #333;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+
+	font-family: 'Roboto Regular', Arial, sans-serif;
+	font-size: 18px;
+	line-height: normal;
+
+	-webkit-appearance: none;
+}
+
+.form-control:focus {
+	border-color: #2e99db;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+input:focus + .form-group__clear, 
+input:hover + .form-group__clear, 
+.form-group__clear:hover {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form-group__clear {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-radius: 50%;
+	outline: none !important;
+	height: 40px;
+	width: 40px;
+
+
+	opacity: 0;
+	visibility: hidden;
+	color: #333;
+	background: #eee;
+
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+
+	cursor: pointer;
+	transform: translate3d(0, -50%, 0);
+	transition: 
+		opacity 0.2s ease-in-out, 
+		visibility 0.2s ease-in-out, 
+		color 0.175s ease-in-out, 
+		background 0.175s ease-in-out;
+}
+
+.form-group__clear:hover {
+	background: #e0e0e0;
+}
+
+.form-group__clear .glyphicon {
+	top: -1px;
+	vertical-align: middle;
+}
+
+.form-group .btn-primary {
+	display: block;
+	border: none;
+	border-radius: 0;
+	outline: none !important;
+	width: 100%;
+	height: 60px;
+
+	color: #fff;
+	background: #4cac51;
+
+	font-size: 23px;
+	font-weight: 200;
+	line-height: normal;
+
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.form-group .btn-primary:hover, 
+.form-group .btn-primary:active, 
+.form-group .btn-primary:focus {
+	background: #4cac51;
+}
+
+.form-group .btn-primary:disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
