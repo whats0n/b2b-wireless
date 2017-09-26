@@ -37,14 +37,14 @@
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input required name="username" autofocus id="username" type="text" class="form-control" placeholder="Username" ng-model="model.username" maxlength="100">
-                        <button class="form-group__clear" type="button" tabindex="-1">
+                        <button class="form-group__clear" type="button" tabindex="-1" onclick="fieldClear(this)">
                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                         </button>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input required id="password" name="password" type="password" class="form-control" placeholder="Password" ng-model="model.password" maxlength="100" autocomplete="off" focus-if="model.username">
-                        <button class="form-group__clear" type="button" tabindex="-1">
+                        <button class="form-group__clear" type="button" tabindex="-1" onclick="fieldClear(this)">
                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -59,6 +59,11 @@
 
         <script id='modelJson' type='application/json'>{&quot;loginUrl&quot;:&quot;/core/login?signin=bf921c54d8635b36aec9a3abe5ec0130&quot;,&quot;antiForgery&quot;:{&quot;name&quot;:&quot;idsrv.xsrf&quot;,&quot;value&quot;:&quot;3Os66Gm9nxUv1KcFeUaXgO_2IfE6l0Eswo_d4AlsTgI0sLLQHz_h1oxPwMBMHp-0yvLF0oYpL80dg_QD7ih8mvaJJe3HVb1jrLZ5frUd2rM&quot;},&quot;allowRememberMe&quot;:true,&quot;rememberMe&quot;:false,&quot;username&quot;:null,&quot;externalProviders&quot;:[],&quot;additionalLinks&quot;:null,&quot;clientName&quot;:&quot;eHopper POS for Wireless Merchant&quot;,&quot;clientUrl&quot;:null,&quot;clientLogoUrl&quot;:null,&quot;errorMessage&quot;:null,&quot;requestId&quot;:&quot;800006fc-0002-7c00-b63f-84710c7967bb&quot;,&quot;siteUrl&quot;:&quot;https://localhost:44333/core/&quot;,&quot;siteName&quot;:&quot;B2BSoft SSO&quot;,&quot;currentUser&quot;:null,&quot;logoutUrl&quot;:&quot;https://localhost:44333/core/logout&quot;,&quot;custom&quot;:null}</script>
         <script src="scripts.2.5.0.js"></script>
+        <script>
+            function fieldClear(elem) {
+                $(elem).siblings('input').val('');
+            }
+        </script>
         
     </body>
 </html>
